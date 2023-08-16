@@ -1,14 +1,24 @@
+import './App.css';
 import React from 'react';
-import NavBar from '../src/NavBar.jsx';
-import ItemListContainer from '../src/ItemListContainer.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar';
+import ItemListContainer from './ItemListContainer';
+import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <NavBar />
-      <ItemListContainer greeting="¡Hola desde ItemListContainer!" />
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-};
+}
 
 export default App;

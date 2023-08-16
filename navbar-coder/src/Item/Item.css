@@ -1,0 +1,47 @@
+.CardItem {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajusta el ancho de la tarjeta según tus preferencias */
+  }
+  
+  .Header {
+    margin-bottom: 10px;
+  }
+  
+  .ItemHeader {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .ItemImg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .Info {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .ItemFooter {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .Option {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .Option:hover {
+    background-color: #0056b3;
+  }
+  

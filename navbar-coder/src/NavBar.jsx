@@ -1,23 +1,46 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light p-3">
-     
       <div className="navbar-brand">
-        <h2>Logo</h2>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
+        >
+          Home
+        </NavLink>
       </div>
 
-      <ul className="navbar-nav mx-auto"> 
+      <ul className="navbar-nav mx-auto">
         <li className="nav-item">
-          <a className="nav-link" href="#">Botón 1</a>
+          <NavLink
+            to="/category/celular"
+            className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
+            activeClassName="active"
+          >
+            Celular
+          </NavLink>
         </li>
-        <li className="nav-item ml-2">
-          <a className="nav-link" href="#">Botón 2</a>
+        <li className="nav-item">
+          <NavLink
+            to="/category/pc"
+            className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
+            activeClassName="active"
+          >
+            PC
+          </NavLink>
         </li>
-        <li className="nav-item ml-2">
-          <a className="nav-link" href="#">Botón 3</a>
+        <li className="nav-item">
+          <NavLink
+            to="/category/tablet"
+            className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
+            activeClassName="active"
+          >
+            Tablet
+          </NavLink>
         </li>
       </ul>
 

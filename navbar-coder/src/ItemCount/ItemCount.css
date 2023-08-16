@@ -1,0 +1,35 @@
+/* ItemCount.css */
+
+.Counter {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .Controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .Button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  .Number {
+    font-size: 24px;
+    margin: 0 20px;
+  }
+  
+  .Add-button {
+    background-color: #27ae60;
+    margin-top: 10px;
+  }
+  
