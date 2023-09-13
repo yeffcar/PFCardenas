@@ -1,8 +1,27 @@
 import './ItemDetail.css';
-import React from 'react'; // Asegúrate de importar React si estás usando JSX
+import React, { useContext, useState } from 'react'; // Asegúrate de importar React y useState
 import ItemCount from '../ItemCount/ItemCount.jsx';
+import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext';
 
 const Item = ({ id, name, img, price, stock }) => {
+  const [quantityAdded, setQuantityAdded] = useState(0); // Estado para guardar la cantidad de items
+
+  const { addItem } = useContext(CartContext)
+
+  const handleAddToCart = (quantity) => {
+    setQuantityAdded(quantity)
+
+    const item = {
+
+        id, name, price
+
+    }
+
+    addItem(item, quantity)
+    
+  };
+
   return (
     <article className="CardItem">
       <header className="Header">
@@ -16,7 +35,16 @@ const Item = ({ id, name, img, price, stock }) => {
         <p className="Info">Stock disponible: {stock}</p>
       </section>
       <footer className='ItemFooter'>
-         <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada', quantity)} />
+        {
+
+          quantityAdded > 0 ? (
+
+            <Link to='/cart' className='Button'>Terminar Compra</Link>
+         
+         ) : (
+          <ItemCount initial={1} stock={stock} onAdd={handleAddToCart} />
+         )
+        }
       </footer>
     </article>
   );

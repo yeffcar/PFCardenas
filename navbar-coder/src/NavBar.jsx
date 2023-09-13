@@ -19,7 +19,7 @@ const NavBar = () => {
           <NavLink
             to="/category/celular"
             className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
-            activeClassName="active"
+            activeclassname="active"
           >
             Celular
           </NavLink>
@@ -28,7 +28,7 @@ const NavBar = () => {
           <NavLink
             to="/category/pc"
             className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
-            activeClassName="active"
+            activeclassname="active"
           >
             PC
           </NavLink>
@@ -37,7 +37,7 @@ const NavBar = () => {
           <NavLink
             to="/category/tablet"
             className={({ isActive }) => (isActive ? 'Activeoption nav-link' : 'nav-link')}
-            activeClassName="active"
+            activeclassname="active"
           >
             Tablet
           </NavLink>
